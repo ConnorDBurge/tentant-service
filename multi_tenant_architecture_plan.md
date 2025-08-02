@@ -238,7 +238,7 @@ public interface IWorkspaceRepository extends JpaRepository<Workspace, UUID> {
 ```java
 package com.beaver.userservice.membership;
 
-import com.beaver.userservice.membership.entity.MembershipStatus;
+import com.beaver.userservice.membership.enums.MembershipStatus;
 import com.beaver.userservice.membership.entity.WorkspaceMembership;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -338,9 +338,9 @@ import com.beaver.userservice.permission.entity.Role;
 import com.beaver.userservice.user.IUserRepository;
 import com.beaver.userservice.user.entity.User;
 import com.beaver.userservice.workspace.dto.CreateWorkspaceRequest;
-import com.beaver.userservice.workspace.entity.PlanType;
+import com.beaver.userservice.workspace.enums.PlanType;
 import com.beaver.userservice.workspace.entity.Workspace;
-import com.beaver.userservice.workspace.entity.WorkspaceStatus;
+import com.beaver.userservice.workspace.enums.WorkspaceStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -404,7 +404,7 @@ public class WorkspaceService {
 ```java
 package com.beaver.userservice.membership;
 
-import com.beaver.userservice.membership.entity.MembershipStatus;
+import com.beaver.userservice.membership.enums.MembershipStatus;
 import com.beaver.userservice.membership.entity.WorkspaceMembership;
 import com.beaver.userservice.permission.entity.Role;
 import com.beaver.userservice.user.entity.User;
@@ -507,9 +507,9 @@ public record CreateWorkspaceRequest(
 package com.beaver.userservice.workspace.dto;
 
 import com.beaver.userservice.common.dto.BaseDto;
-import com.beaver.userservice.workspace.entity.PlanType;
+import com.beaver.userservice.workspace.enums.PlanType;
 import com.beaver.userservice.workspace.entity.Workspace;
-import com.beaver.userservice.workspace.entity.WorkspaceStatus;
+import com.beaver.userservice.workspace.enums.WorkspaceStatus;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.SuperBuilder;
@@ -546,7 +546,7 @@ public class WorkspaceDto extends BaseDto {
 package com.beaver.userservice.membership.dto;
 
 import com.beaver.userservice.common.dto.BaseDto;
-import com.beaver.userservice.membership.entity.MembershipStatus;
+import com.beaver.userservice.membership.enums.MembershipStatus;
 import com.beaver.userservice.membership.entity.WorkspaceMembership;
 import com.beaver.userservice.user.dto.UserDto;
 import com.beaver.userservice.workspace.dto.WorkspaceDto;
